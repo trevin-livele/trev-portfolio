@@ -1,0 +1,406 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Default styles for desktop */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #1d1d1d;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: #ff5733;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff5733;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none; /* Hide the menu initially */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: block; /* Show the menu when activated */
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu toggle button */
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .menu-toggle:hover {
+    color: #ff5733;
+  }
+}
+
+/* Additional styles for mobile menu toggle button */
+.menu-toggle {
+  display: none; /* Hide the toggle button on larger screens */
+}
+
+/* Add padding to the top of sections to account for the fixed navbar */
+section {
+  padding-top: 60px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.profile img {
+  width: 460px;
+  height: 450px;
+  border-radius: 50%;
+  border: 5px solid #ff5733;
+  margin-right: 50px;
+}
+
+.intro {
+  max-width: 600px;
+}
+
+.intro h1 {
+  font-size: 48px;
+  color: #ff5733;
+}
+
+.intro h2 {
+  font-size: 36px;
+}
+
+.intro p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff3300;
+}
+
+.about-me {
+  padding: 50px 0;
+  background-color: #1d1d1d;
+}
+
+.about-me h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.personal-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.info-item {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item strong {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-filters .filter {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.portfolio-filters .filter.active,
+.portfolio-filters .filter:hover {
+  background-color: #ff5733;
+  color: #fff;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio-items img {
+  width: 30%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.portfolio-items img:hover {
+  transform: scale(1.05);
+}
+
+.blog {
+  padding: 50px 0;
+  background-color: #1d1d1d;
+}
+
+.blog h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.blog-item {
+  width: 30%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: #2a2a2a;
+}
+
+.blog-item img {
+  width: 100%;
+}
+
+.blog-item h3 {
+  padding: 15px;
+  font-size: 20px;
+}
+
+.blog-item p {
+  padding: 0 15px 15px;
+}
+
+.blog-item:hover {
+  transform: scale(1.05);
+}
+
+.contact {
+  padding: 50px 0;
+}
+
+.contact h2 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  width: 45%;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  width: 45%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #ff3300;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: #1d1d1d;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #ff5733;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff3300;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile img {
+    margin: 0 0 20px;
+  }
+
+  .personal-info,
+  .stats,
+  .portfolio-items,
+  .blog-items,
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-item,
+  .stat-item,
+  .contact-info,
+  .contact-form,
+  .portfolio-items img,
+  .blog-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+
+  .portfolio-items img,
+  .blog-item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 36px;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+  }
+}
