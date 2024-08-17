@@ -449,6 +449,7 @@ footer p {
   .portfolio-items img,
   .blog-item {
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 
@@ -459,5 +460,52 @@ footer p {
 
   .intro h2 {
     font-size: 24px;
+  }
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .portfolio-item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 100%;
+  }
+
+  .portfolio h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-item-inner {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .portfolio-item-inner {
+    height: 200px;
+  }
+
+  .portfolio-front h3 {
+    font-size: 16px;
+  }
+
+  .portfolio-back {
+    padding: 15px;
   }
 }
