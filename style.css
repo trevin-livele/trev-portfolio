@@ -263,6 +263,7 @@ section {
   overflow: hidden;
   transition: transform 0.3s;
   background-color: #2a2a2a;
+  text-align: center;
 }
 
 .blog-item img {
@@ -277,6 +278,23 @@ section {
 .blog-item p {
   padding: 0 15px 15px;
 }
+
+
+
+.blog-item a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff5733;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.blog-item a:hover {
+  background-color: #ff5733;
+}
+
 
 .blog-item:hover {
   transform: scale(1.05);
