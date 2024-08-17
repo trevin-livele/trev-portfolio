@@ -419,7 +419,8 @@ footer p {
   }
 
   .profile img {
-    margin: 0 0 20px;
+    width: 260px;
+    height: 250px;
   }
 
   .personal-info,
