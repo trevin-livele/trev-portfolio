@@ -451,6 +451,11 @@ footer p {
     margin-bottom: 20px;
     width: 100%;
   }
+
+  .info-item {
+    flex: 0 0 0;
+    margin: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -469,7 +474,6 @@ footer p {
 
 
 
-/* Responsive Design */
 @media (max-width: 992px) {
   .portfolio-item {
     width: 45%;
